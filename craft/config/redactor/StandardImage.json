@@ -1,0 +1,5 @@
+{
+	"buttons": ["html","formatting","bold","italic","unorderedlist","orderedlist","link","image","video"],
+	"plugins": ["source","fullscreen"],
+	"formattingTags": ["p", "blockquote", "h2", "h3", "h4"]
+}
