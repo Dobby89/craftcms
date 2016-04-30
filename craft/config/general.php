@@ -11,6 +11,7 @@ return array(
 
     '*' => array(
         // Used across all environments
+        'omitScriptNameInUrls' => true, // SEO-friendly URLS
     ),
 
     'LOCAL' => array(
