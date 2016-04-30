@@ -1,0 +1,28 @@
+{#
+ # Project entry template
+ # -------------------
+ #
+ # This template gets loaded whenever a Project entry’s URL is
+ # requested. That’s because the Project section’s Template setting is
+ # set to “projects/_entry”, the path to this template.
+ #
+ # When this template is loaded, it will already have an ‘entry’
+ # variable, set to the requested Project entry.
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://craftcms.com/docs/routing
+ #}
+
+{% extends "_layout" %}
+
+{% block content %}
+	<article>
+		<h1>{{ entry.title }}</h1>
+        <p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
+		<ul>
+            <li>URL: {{ entry.website}}</li>
+            <li>Uses Gulp?: {{ entry.usesGulp}}</li>
+            <li>Framework: {{ entry.framework}} {{ entry.frameworkVersion}}</li>
+        </ul>
+	</article>
+{% endblock %}

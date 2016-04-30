@@ -54,6 +54,21 @@
 			<nav>
 				<ul>
 					<li><a href="{{ url('news') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>News</a></li>
+					<li><a href="{{ url('projects') }}" {% if craft.request.firstSegment == 'projects' %}class="active"{% endif %}>Projects</a>
+						{% set projects = craft.entries.section('project') %}
+						<ul>
+							{% nav project in projects %}
+							<li>
+								<a href="{{ project.url }}">{{ project.title }}</a>
+								{% ifchildren %}
+								<ul>
+									{% children %}
+								</ul>
+								{% endifchildren %}
+							</li>
+							{% endnav %}
+						</ul>
+					</li>
 				</ul>
 			</nav>
 		</header>
